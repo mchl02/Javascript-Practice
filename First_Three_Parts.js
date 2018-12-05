@@ -126,18 +126,123 @@ var makeThisStringForTest = "This is a string";
 console.log(asdf(makeThisStringForTest));
 
 
-console.log("below this will be me making a switch/case")
+console.log("below this will be me making a switch/case");
+var fruits = "Banana";
 switch (fruits){
   case "Strawberries":
       console.log("Damn strawberries are pretty expensive nowadays...");
       break;
   case "Oranges":
-      console.log("Dont you just love eating oranges in the hot weather?")
+      console.log("Dont you just love eating oranges in the hot weather?");
       break;
   case "Bananas":
-      console.log("This is the most overrated fruit in my opinion..")
+      console.log("This is the most overrated fruit in my opinion..");
       break;
   default:
-      console.log("Not going to lie, but you're fruit game is pretty weak....")
+      console.log("Not going to lie, but you're fruit game is pretty weak....");
+}
+
+/*
+throw 42;
+throw true;
+*/
+
+/*
+function getMonthName(months){
+  months = months - 1;
+  var months1111 = ['Jan','Feb','Mar','Apr','May','Jun','Aug','Jul','Aug','Sep','Oct','Nov','Dec'];
+  
+  if (months1111[months]){
+    return months1111[months];
+  }else{
+    throw 'InvalidMonthNo';
+  }
+}
+
+try {
+  monthName = getMonthName(myMonth);
+}
+catch(e){
+  monthName = 'unknown';
+  logMyErrors(e);
+}
+
+console.log(monthName)
+*/
+
+
+
+var stepper;
+for (stepper = 0; stepper < 5; stepper++){
+  console.log("My name is Matthew Lee");
+}
+
+console.log("Below this is a do-while loop");
+var testDoVariable = 0;
+do {
+  testDoVariable += 1;
+  console.log(testDoVariable);
+} while (testDoVariable < 5);
+console.log("Below this is a while loop")
+var num = 0;
+var dum = 0;
+while (num < 3){
+  num++
+  dum = num + dum
+}
+
+alert(dum)
+console.log("Below this is a pointless loop")
+
+var letterX = 0;
+var letterY = 0;
+labelledLoop: while(true){
+  console.log('Outer loop: ' + x);
+  letterX += 1;
+  letterY += 1;
+  while(true){
+    console.log('Inner Loops: '+ letterY);
+    letterY += 1;
+    if (letterX == 10 && letterY == 10 ){
+      break labelledLoop;
+    } else {
+      if (letterY == 10){
+        break;
+      }
+    }
+  }
+}
+
+console.log("This is my own loop YAY")
+
+//This is still not finished
+var daRealTest = 0;
+var lettersX = 0;
+var lettersY = 0;
+var lettersZ = 0;
+var lettersM = 0;
+var lettersL = 0;
+theRealLabelledLoop: while (daRealTest < 5){
+  var testVariableForThisLoop = 0; 
+  var testVariableForThisLoop1 = 1;
+  var lettersX +=1;
+  var lettersY +=1;
+  var lettersZ +=1;
+  
+  theSecondRealLabelledLoop: while (testVariableForThisLoop<){
+    
+    theThirdRealLabelledLoop: while (testVariableForThisLoop1 < 5){
+      if (testVariableForThisLoop1 == <7){
+        console.log("Yo, will this run twice?")
+        continue;
+      }else{
+        break theRealLabelledLoop;
+      }
+    }
+      
+
+  }
+    
+    
 }
 
