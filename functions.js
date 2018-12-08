@@ -87,3 +87,7 @@ var a = [x, x, x, x, x];
 
 for (var i = 0, j = 9; i <= j; i++, j--)
   console.log('a[' + i + '][' + j + ']= ' + a[i][j]);
+
+if (justtheDay instanceof Date){
+    return "lol";
+}
