@@ -91,3 +91,4 @@ for (var i = 0, j = 9; i <= j; i++, j--)
 if (justtheDay instanceof Date){
     return "lol";
 }
+//Edits after
