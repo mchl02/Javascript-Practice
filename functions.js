@@ -92,3 +92,11 @@ if (justtheDay instanceof Date){
     return "lol";
 }
 //Edits after
+
+var justtheDay = new Date(1995, 12, 17);
+if (justtheDay instanceof Date){
+    return "lol";
+}
+console.log("Am I stuck in a for loop?");
+var today = new Date();
+console.log(today);
