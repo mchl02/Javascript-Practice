@@ -116,6 +116,16 @@ const options = { year: '2-digit', month: '2-digit', day: '2-digit',
 const americanDateTime = new Intl.DateTimeFormat('en-US', options).format;
  
 console.log(americanDateTime(datesMenu));
+//Regular expressions are used to search for specific key words (Searching)
+var myRe = new RegExp('d(b+)d', 'g');
+var myArray = myRe.exec('cdbbdbsbz');
+console.log(myArray);
 
-console.log("Below will start the regular expressions:")
+
+var re = /\w+\s/g;
+var str = 'fee fi fo fum';
+var myArray = str.match(re);
+console.log(myArray);
+
+// ["fee ", "fi ", "fo "]
 
