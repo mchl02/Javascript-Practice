@@ -7,6 +7,7 @@
  * 3. Display to insert the result in a comment after the selection. (Cmd-L)
  */
 
+//This is the beginning of when I started javascript programming
 //Ahh the language where you need semi colons, sigh. one thing I liked about swift...
 function greetMe(yourName) {
   alert('Hello' + yourName);
