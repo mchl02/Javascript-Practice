@@ -23,3 +23,6 @@ var arrayForIterating = ["Matthew", "Lee", "Program"];
 for (var w = 0; w < arrayForIterating.length; w++){
     console.log(arrayForIterating[w]);
 }
+
+
+//A bunch of built in functions can be used on this arrays
