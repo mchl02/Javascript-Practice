@@ -25,4 +25,21 @@ for (var w = 0; w < arrayForIterating.length; w++){
 }
 
 
+var colors = ['Red', 'Blue', 'Green'];
+colors.forEach(function(color) {
+    console.log(color);
+});
+
+
 //A bunch of built in functions can be used on this arrays
+//Such as sort or reverse. No need to write them down and I should just look them up when I need them. 
+
+var a = new Array(4);
+for (i = 0; i < 4; i++) {
+  a[i] = new Array(4);
+  for (j = 0; j < 4; j++) {
+    a[i][j] = '[' + i + ', ' + j + ']';
+  }
+}
+
+
