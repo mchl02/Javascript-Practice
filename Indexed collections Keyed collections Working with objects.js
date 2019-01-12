@@ -64,3 +64,4 @@ for (var [key, value] of sayings) {
 sayings.clear();
 sayings.size; // 0
 
+//Keys
