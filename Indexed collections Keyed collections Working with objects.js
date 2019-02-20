@@ -42,9 +42,12 @@ for (i = 0; i < 4; i++) {
   }
 }
 
+console.log(a); 
+
 //Start Keyed Collections
 
-//Sets
+//MAPS
+//MAPS: key/value map
 var sayings = new Map();
 sayings.set('dog', 'woof');
 sayings.set('cat', 'meow');
@@ -64,11 +67,13 @@ for (var [key, value] of sayings) {
 sayings.clear();
 sayings.size; // 0
 
-//Even more sets
+//Regular Sets
+// *Values can only appear once* 
 var mySet = new Set();
 mySet.add(1);
 mySet.add('some text');
 mySet.add('foo');
+mySet.add('So Much Work!!!')
 
 mySet.has(1); // true
 mySet.delete('foo');
@@ -79,6 +84,24 @@ for (let item of mySet) console.log(item);
 // "some text"
 //Keys
 
+//Changing Arrays to Sets
+var myOwnSet = new Set(); 
+myOwnSet.add(47);
+myOwnSet.add(47);
+myOwnSet.add('Hello');
+myOwnSet.add('Hello');
+
+//One way to transfer
+var hello = Array.from(myOwnSet);
+console.log("This is the main test"); 
+console.log(hello); 
+//Another way to transfer
+//Spread syntax
+
+
+mySet2 = new Set([1, 2, 3, 4]);
+var bestSet = [...mySet2];
+console.log(bestSet); 
 //Working with objects
 // Animal properties and method encapsulation
 var Animal = {
