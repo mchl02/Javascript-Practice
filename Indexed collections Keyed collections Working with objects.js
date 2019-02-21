@@ -119,3 +119,10 @@ animal1.displayType(); // Output:Invertebrates
 var fish = Object.create(Animal);
 fish.type = 'Fishes';
 fish.displayType(); // Output:Fishes
+
+
+//Making Objects
+var myCar = new Object();
+myCar.make = 'Ford';
+myCar.model = 'Mustang';
+myCar.year = 1969;
