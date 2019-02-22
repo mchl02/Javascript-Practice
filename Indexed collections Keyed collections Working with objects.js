@@ -122,7 +122,30 @@ fish.displayType(); // Output:Fishes
 
 
 //Making Objects
-var myCar = new Object();
-myCar.make = 'Ford';
-myCar.model = 'Mustang';
-myCar.year = 1969;
+var myComputerSetup = new Object();
+myCar.mouse = 'Razer Deathadder';
+myCar.keyboard = 'Ducky 1';
+myCar.headphone = 'KGH Heaphones';
+
+
+//Properties of objects that do not exist go to undefined 
+
+
+//Creating objects another way 
+myCar['mouse'] = 'Razer Deathadder';
+myCar['keyboard'] = 'Ducky 1';
+myCar['headphone'] = 'KGH Heaphones';
+
+var myObj = new Object(),
+    str = 'myString',
+    rand = Math.random(),
+    obj = new Object();
+
+myObj.type              = 'Dot syntax';
+myObj['date created']   = 'String with space';
+myObj[str]              = 'String value';
+myObj[rand]             = 'Random Number';
+myObj[obj]              = 'Object';
+myObj['']               = 'Even an empty string';
+
+console.log(myObj);
