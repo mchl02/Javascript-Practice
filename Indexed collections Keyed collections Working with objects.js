@@ -148,4 +148,42 @@ myObj[rand]             = 'Random Number';
 myObj[obj]              = 'Object';
 myObj['']               = 'Even an empty string';
 
-console.log(myObj);
+console.log(myObj); 
+
+
+// Animal properties and method encapsulation
+var Animal = {
+  type: 'Invertebrates', // Default value of properties
+  displayType: function() {  // Method which will display type of Animal
+    console.log(this.type);
+  }
+};
+
+// Create new animal type called animal1 
+var animal1 = Object.create(Animal);
+animal1.displayType(); // Output:Invertebrates
+
+// Create new animal type called Fishes
+var fish = Object.create(Animal);
+fish.type = 'Fishes';
+fish.displayType(); // Output:Fishes
+
+
+//get and set in javascript
+var o = {
+  a: 7,
+  get b() { 
+    return this.a + 1;
+  },
+  set c(x) {
+    this.a = x / 2;
+  }
+};
+
+console.log(o.a); // 7
+console.log(o.b); // 8
+o.c = 50;
+console.log(o.a); // 25
+
+
+
