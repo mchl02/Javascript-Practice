@@ -120,25 +120,42 @@ var fish = Object.create(Animal);
 fish.type = 'Fishes';
 fish.displayType(); // Output:Fishes
 
+//Deafult Object Example
 
+var myCar = new Object();
+myCar.make = 'Ford';
+myCar.model = 'Mustang';
+myCar.year = 1969;
+
+
+myCar['make'] = 'Ford';
+myCar['model'] = 'Mustang';
+myCar['year'] = 1969;
+
+var propertyName = 'make';
+myCar[propertyName] = 'Ford';
+
+propertyName = 'model';
+myCar[propertyName] = 'Mustang';
 //Making Objects
 var myComputerSetup = new Object();
-myCar.mouse = 'Razer Deathadder';
-myCar.keyboard = 'Ducky 1';
-myCar.headphone = 'KGH Heaphones';
+myComputerSetup.mouse = 'Razer Deathadder';
+myComputerSetup.keyboard = 'Ducky 1';
+myComputerSetup.headphone = 'KGH Heaphones';
 
 
 //Properties of objects that do not exist go to undefined 
 
 
 //Creating objects another way 
-myCar['mouse'] = 'Razer Deathadder';
-myCar['keyboard'] = 'Ducky 1';
-myCar['headphone'] = 'KGH Heaphones';
+myComputerSetup['mouse'] = 'Razer Deathadder';
+myComputerSetup['keyboard'] = 'Ducky 1';
+myComputerSetup['headphone'] = 'KGH Heaphones';
 
 var myObj = new Object(),
     str = 'myString',
     rand = Math.random(),
+    //through testing, this is unnecessary
     obj = new Object();
 
 myObj.type              = 'Dot syntax';
@@ -148,9 +165,30 @@ myObj[rand]             = 'Random Number';
 myObj[obj]              = 'Object';
 myObj['']               = 'Even an empty string';
 
+console.log("test")
 console.log(myObj); 
 
+//testing how to create objects
+var myLeagueObject = new Object(),
+    str1 = 'league string';
+myLeagueObject[str1] = "Will this work?";
+console.log(myLeagueObject)
 
+
+//Fujction that loops iterates over objects
+function showProps(obj, objName) {
+    var result = '';
+    for (var i in obj) {
+      // obj.hasOwnProperty() is used to filter out properties from the object's prototype chain
+      if (obj.hasOwnProperty(i)) {
+        result += objName + '.' + i + ' = ' + obj[i] + '\n';
+      }
+    }
+    return result;
+}
+console.log("Testing to see if function works");
+showProps(myCar, "myCar");
+console.log(myComputerSetup, "myComputerSetup");
 // Animal properties and method encapsulation
 var Animal = {
   type: 'Invertebrates', // Default value of properties
