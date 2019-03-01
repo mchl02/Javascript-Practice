@@ -224,4 +224,26 @@ o.c = 50;
 console.log(o.a); // 25
 
 
+//Object Initializer 
+//Obj is name of the object
+//property_i and value_i 
+var obj = { property_1:   value_1,   // property_# may be an identifier...
+            2:            value_2,   // or a number...
+            // ...,
+            'property n': value_n }; // or a string
+if (cond) var x = {greeting: 'hi there'};
+
+var myHonda = {color: 'red', wheels: 4, engine: {cylinders: 4, size: 2.2}};
+
+function Car(make, model, year) {
+  this.make = make;
+  this.model = model;
+  this.year = year;
+}
+
+
+var kenscar = new Car('Nissan', '300ZX', 1992);
+var vpgscar = new Car('Mazda', 'Miata', 1990);
+
+
 
