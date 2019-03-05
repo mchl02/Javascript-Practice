@@ -207,16 +207,7 @@ fish.type = 'Fishes';
 fish.displayType(); // Output:Fishes
 
 
-//get and set in javascript
-var o = {
-  a: 7,
-  get b() { 
-    return this.a + 1;
-  },
-  set c(x) {
-    this.a = x / 2;
-  }
-};
+
 
 console.log(o.a); // 7
 console.log(o.b); // 8
@@ -272,3 +263,50 @@ car2.owner.name
 car1.color = 'black';
 
 //object.create method below 
+
+
+
+//get and set in javascript
+var o = {
+  a: 7,
+  get b() { 
+    return this.a + 1;
+  },
+  set c(x) {
+    this.a = x / 2;
+  }
+};
+
+
+var d = Date.prototype;
+Object.defineProperty(d, 'year', {
+  get: function() { return this.getFullYear(); },
+  set: function(y) { this.setFullYear(y); }
+});
+
+
+var now = new Date();
+console.log(now.year); // 2000
+now.year = 2001; // 987617605170
+console.log(now);
+// Wed Apr 18 11:13:25 GMT-0700 (Pacific Daylight Time) 2001
+
+
+
+var o = { a: 0 };
+
+var o = {
+  a: 7,
+  get b() { return this.a + 1; },
+  set c(x) { this.a = x / 2; }
+};
+
+
+Object.defineProperties(o, {
+    'b': { get: function() { return this.a + 1; } },
+    'c': { set: function(x) { this.a = x / 2; } }
+});
+
+o.c = 10; // Runs the setter, which assigns 10 / 2 (5) to the 'a' property
+console.log(o.b); // Runs the getter, which yields a + 1 or 6
+
