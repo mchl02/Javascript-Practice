@@ -294,6 +294,7 @@ fish.displayType(); // Output:Fishes
 
 //Below is inheritance and objects in JS inerites at least one other subject
 //All objects in JS inherits at least one other object
+//When you inititally define a property by name, you can always refer to it. 
 //get and set in javascript
 var o = {
   a: 7,
@@ -305,12 +306,60 @@ var o = {
   }
 };
 
+//Below are adding property types to previously defined objects. 
+
+
+///This line below will add a car property to all objects of the type car
+Car.prototype.color = null;
+//Below will give car1 the color black 
+car1.color = 'black';
 
 var d = Date.prototype;
 Object.defineProperty(d, 'year', {
   get: function() { return this.getFullYear(); },
   set: function(y) { this.setFullYear(y); }
 });
+
+//Below are defining methods   
+//Method is a function that is associated with an object. 
+
+objectName.methodname = functionName;
+
+var myObj = {
+  myMethod: function(params) {
+    // ...do something
+  }
+
+  // OR THIS WORKS TOO
+
+  myOtherMethod(params) {
+    // ...do something else
+  }
+};
+
+function displayCar() {
+  var result = 'A Beautiful ' + this.year + ' ' + this.make
+    + ' ' + this.model;
+  pretty_print(result);
+}
+
+
+
+object.methodname(params);
+
+this.displayCar = displayCar;
+
+car1.displayCar();
+car2.displayCar();
+
+
+function Car(make, model, year, owner) {
+  this.make = make;
+  this.model = model;
+  this.year = year;
+  this.owner = owner;
+  this.displayCar = displayCar;
+}
 
 
 var now = new Date();
