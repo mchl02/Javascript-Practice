@@ -218,27 +218,32 @@ console.log(o.a); // 25
 //Object Initializer 
 //Obj is name of the object
 //property_i and value_i 
+//Property_i = 
 var obj = { property_1:   value_1,   // property_# may be an identifier...
             2:            value_2,   // or a number...
             // ...,
             'property n': value_n }; // or a string
+
+//This will make x get this object if the cond is true 
 if (cond) var x = {greeting: 'hi there'};
 
 var myHonda = {color: 'red', wheels: 4, engine: {cylinders: 4, size: 2.2}};
 
+//this is a car function and can be used for a car object
 function Car(make, model, year) {
   this.make = make;
   this.model = model;
   this.year = year;
 }
 
+//Use the new, to make objects 
 
 var kenscar = new Car('Nissan', '300ZX', 1992);
 var vpgscar = new Car('Mazda', 'Miata', 1990);
 
 
 
-
+//This is a person function and can be used for a person function 
 function Person(name, age, sex) {
   this.name = name;
   this.age = age;
@@ -248,6 +253,7 @@ function Person(name, age, sex) {
 var rand = new Person('Rand McKinnon', 33, 'M');
 var ken = new Person('Ken Jones', 39, 'M');
 
+//You can add in an owner argument 
 function Car(make, model, year, owner) {
   this.make = make;
   this.model = model;
@@ -255,17 +261,39 @@ function Car(make, model, year, owner) {
   this.owner = owner;
 }
 
+//Know in the arguments you can write the name of the owner 
 var car1 = new Car('Eagle', 'Talon TSi', 1993, rand);
 var car2 = new Car('Nissan', '300ZX', 1992, ken);
 
+//If you want to find out the owner of the name, you can write the command for it. 
 car2.owner.name
 
+//If you want to add in a color function for the car property, all you have to do is the command below 
 car1.color = 'black';
 
 //object.create method below 
+//Objects can also be created using the .create() method. 
+//This allows you the protytpe object for the obejct you want to create without needing to decline the constructor funtion. 
+// Animal properties and method encapsulation 
+var Animal = {
+  type: 'Invertebrates', // Default value of properties
+  displayType: function() {  // Method which will display type of Animal
+    console.log(this.type);
+  }
+};
 
+// Create new animal type called animal1 
+var animal1 = Object.create(Animal);
+animal1.displayType(); // Output:Invertebrates
 
+// Create new animal type called Fishes
+var fish = Object.create(Animal);
+//This will give the type of fishes 
+fish.type = 'Fishes';
+fish.displayType(); // Output:Fishes
 
+//Below is inheritance and objects in JS inerites at least one other subject
+//All objects in JS inherits at least one other object
 //get and set in javascript
 var o = {
   a: 7,
