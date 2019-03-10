@@ -337,6 +337,7 @@ var myObj = {
   }
 };
 
+//This is how to call the methods 
 function displayCar() {
   var result = 'A Beautiful ' + this.year + ' ' + this.make
     + ' ' + this.model;
@@ -351,6 +352,7 @@ this.displayCar = displayCar;
 
 car1.displayCar();
 car2.displayCar();
+
 
 
 function Car(make, model, year, owner) {
@@ -387,3 +389,30 @@ Object.defineProperties(o, {
 o.c = 10; // Runs the setter, which assigns 10 / 2 (5) to the 'a' property
 console.log(o.b); // Runs the getter, which yields a + 1 or 6
 
+//Deleting properties
+
+// Creates a new object, myobj, with two properties, a and b.
+var myobj = new Object;
+myobj.a = 5;
+myobj.b = 12;
+
+// Removes the a property, leaving myobj with only the b property.
+delete myobj.a;
+console.log ('a' in myobj); // yields "false"
+
+// Two variables, two distinct objects with the same properties
+var fruit = {name: 'apple'};
+var fruitbear = {name: 'apple'};
+
+fruit == fruitbear; // return false
+fruit === fruitbear; // return false
+// Two variables, a single object
+var fruit = {name: 'apple'};
+var fruitbear = fruit;  // assign fruit object reference to fruitbear
+
+//objects are a reference type 
+// here fruit and fruitbear are pointing to same object
+fruit == fruitbear; // return true
+fruit === fruitbear; // return true
+fruit.name = 'grape';
+console.log(fruitbear);    // yields { name: "grape" } instead of { name: "apple" }
